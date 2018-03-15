@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Driver
+Bundle-SymbolicName: org.eclipse.emf.henshin.multicda.cda.driver
+Bundle-Version: 1.0.0.qualifier
+Export-Package: org.eclipse.emf.henshin.multicda.cda.driver
+Require-Bundle: org.eclipse.emf.henshin.cpa.atomic.eval,
+ org.eclipse.emf.henshin.model,
+ org.eclipse.emf.henshin.cpa.atomic,
+ org.eclipse.emf.henshin.cpa,
+ org.eclipse.emf.ecore.xmi

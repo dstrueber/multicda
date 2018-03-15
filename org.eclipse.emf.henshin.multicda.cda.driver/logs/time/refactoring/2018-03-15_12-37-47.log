@@ -1,0 +1,28 @@
+Starting CDA with 8 rules.
+31 16 0 0 0 0 0 16    | decapsulateAttribute
+2 2 1 0 0 0 0 0    | pullUpEncapsulatedAttribute
+0 0 0 0 0 0 0 16    | moveMethod
+0 0 0 0 0 0 0 0    | moveAttribute
+0 15 0 0 0 0 0 0    | deleteClass
+0 0 0 0 0 0 0 0    | introduceNewPackageForSingleClass
+0 0 16 0 0 0 0 0    | newPackageForImplementations
+0 69 0 0 0 0 15 16    | joinClassesWithCommonSuperclass
+
+16 22 0 0 0 0 0 0    | decapsulateAttribute
+0 0 16 0 0 0 0 0    | pullUpEncapsulatedAttribute
+0 0 0 0 0 0 0 0    | moveMethod
+0 0 0 0 0 0 0 0    | moveAttribute
+15 0 0 0 0 0 0 16    | deleteClass
+0 0 0 0 0 0 0 16    | introduceNewPackageForSingleClass
+1 0 0 1 1 1 0 0    | newPackageForImplementations
+0 47 0 0 0 0 15 138    | joinClassesWithCommonSuperclass
+
+16 0 0 0 0 16 0 0    | decapsulateAttribute
+0 15 0 0 0 0 0 0    | pullUpEncapsulatedAttribute
+0 0 0 16 0 0 0 0    | moveMethod
+0 0 0 0 0 0 0 0    | moveAttribute
+0 0 0 0 0 0 0 0    | deleteClass
+0 15 1 0 0 1 1 0    | introduceNewPackageForSingleClass
+0 0 0 0 0 0 0 0    | newPackageForImplementations
+0 16 0 15 0 0 16 100    | joinClassesWithCommonSuperclass
+
