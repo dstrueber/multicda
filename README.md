@@ -1,6 +1,6 @@
 # Multi-Granular Conflict and Dependency Analysis
 
-*Prototype implementation of the analysis technique presented in the ICSE paper "Multi-Granular Conflict and Dependency Analysis in Software Engineering based on Graph Transformation" (Lambers, Strüber, Taentzer, Born, Huebert).*
+*Implementation prototype of the analysis technique presented in the ICSE2018 paper "Multi-Granular Conflict and Dependency Analysis in Software Engineering based on Graph Transformation" (Lambers, Strüber, Taentzer, Born, Huebert).*
 
 This repository is a fork of https://github.com/KristopherBorn/multiCDA. We here provide a stable, self-contained version of the prototype, while the latter repository is used to coordinate the integration of the technique into the Henshin core.
 
@@ -19,11 +19,11 @@ The project *org.eclipse.emf.henshin.multicda.cda.driver* contains a simple usag
 * The folder *rules/refactoring* contains 8 selected refactoring rules, which we use to illustrate conflict detection.
 * The class *RunConflictDetectionOnRefactoring.java* contains the code for executing our conflict detection on the example rule set. 
 
-The class RunConflictDetectionOnRefactoring supports a configuration option regarding the desired granularity level: Our technique supports the detection of conflicts on three granularity levels .
+The class *RunConflictDetectionOnRefactoring* supports a configuration option regarding the desired granularity level: Our technique supports the detection of conflicts on three granularity levels:
 
- * *binary* specifies whether a conflict exists or not
- * *coarse-grained* identifies for a  given pair of rules all *minimal conflict reasons*, that is, problematic deletion components that lead to a conflict,
- * *fine-grained* identifies one representative example, called *initial conflict reason*, of each possible conflict. Initial conflict reasons correspond to *initial conflicts*, a distinguished subset of the set of critical pairs (which retains the completeness and local-confluence properties initially provided by critical pairs).
+ * **binary** specifies whether a conflict exists or not
+ * **coarse-grained** identifies for a  given pair of rules all *minimal conflict reasons*, that is, problematic deletion components that lead to a conflict,
+ * **fine-grained** identifies one representative example, called *initial conflict reason*, of each possible conflict. Initial conflict reasons correspond to *initial conflicts*, a distinguished subset of the set of critical pairs (which retains the completeness and local-confluence properties initially provided by critical pairs).
 
 Per default, the analysis is performed on all three granularity levels:
 
@@ -72,10 +72,9 @@ Starting CDA with 8 rules.
 
 ```
 
-We can inspect the reported results in more detail, which is supported by the provided API. The results are represented by ° Spans°, where a Span consists of a graph and its mappings to the two rules from the given rule pair.
+We can inspect the reported results in more detail, which is supported by the provided API. The results are represented by *Spans*, where a Span consists of a graph and its mappings to the two rules from the given rule pair.
 
 For example, to inspect the nodes in the results on the coarse-grained level, add the following lines after line 128: 
-
 
 ```
 for (Span span : result) {
