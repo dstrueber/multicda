@@ -99,3 +99,8 @@ The expected console output should be:
 ## Reproduce  ICSE18 evaluation
 
 The project *org.eclipse.emf.henshin.cpa.atomic.eval* includes various rule sets together with **Runner.java* classes for reproducing the evaluation from our ICSE18 paper. On execution, the evaluation results are written to the *logs* directory.
+
+## Current limitations/scope
+
+* We only identify delete-use-conflicts and create-use-dependencies for rules based on typed graphs with node inheritance. Attributes are currently outside our scope.
+* Our technique relies on an overapproximation: in our experimentes, the number of falsepositives  (i.e. rule pairs for which a conflict was incorrently detected) was between 0% and 12% per rule set. False negatives (i.e. for which incorrectly no conflict was detected) should not occur.
