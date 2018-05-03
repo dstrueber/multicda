@@ -103,4 +103,4 @@ The project *org.eclipse.emf.henshin.cpa.atomic.eval* includes various rule sets
 ## Current limitations/scope
 
 * We only identify **delete-use-conflicts** and **create-use-dependencies** for rules based on typed graphs with node inheritance. Attributes are currently outside our scope.
-* Our technique relies on an overapproximation. In our experimentes, the number of false positives  (rule pairs for which a conflict was incorrently detected) was between 0% and 12% per rule set. False negatives (rule pairs for which incorrectly no conflict is  detected) should not occur.
+* Our technique relies on an overapproximation. In our experiments, the number of false positives  (rule pairs for which a conflict was incorrently detected) was between 0% and 12% per rule set. False negatives (rule pairs for which incorrectly no conflict is  detected) should not occur.
