@@ -23,7 +23,7 @@ The class *RunConflictDetectionOnRefactoring* supports a configuration option re
 
  * **binary** specifies whether a conflict exists or not
  * **coarse-grained** identifies for a  given pair of rules all *minimal conflict reasons*, that is, problematic deletion components that lead to a conflict,
- * **fine-grained** identifies one representative example, called *initial conflict reason*, of each possible conflict. Initial conflict reasons correspond to *initial conflicts*, a distinguished subset of the set of critical pairs (which retains the completeness and local-confluence properties initially provided by critical pairs).
+ * **fine-grained** identifies one representative example, called *conflict reason*, of each possible conflict. The computed conflict reasons correspond to *initial conflicts*, a distinguished subset of the set of critical pairs (which retains the completeness and local-confluence properties initially provided by critical pairs).
 
 Per default, the analysis is performed on all three granularity levels:
 
@@ -60,7 +60,7 @@ Starting CDA with 8 rules.
 0 0 0 0 2 2 6 2    | newPackageForImplementations
 0 0 2 2 1 1 2 2    | joinClassesWithCommonSuperclass
 
-[MultiCDA] Computing initial conflict reasons:
+[MultiCDA] Computing conflict reasons:
 3 3 2 0 0 0 0 2    | decapsulateAttribute
 13 13 2 1 0 0 0 5    | pullUpEncapsulatedAttribute
 2 2 1 0 0 0 0 1    | moveMethod
@@ -103,4 +103,4 @@ The project *org.eclipse.emf.henshin.cpa.atomic.eval* includes various rule sets
 ## Current limitations/scope
 
 * We only identify **delete-use-conflicts** and **create-use-dependencies** for rules based on typed graphs with node inheritance. Attributes are currently outside our scope.
-* Our technique relies on an overapproximation. In our experimentes, the number of fals epositives  (rule pairs for which a conflict was incorrently detected) was between 0% and 12% per rule set. False negatives (rule pairs for which incorrectly no conflict is  detected) should not occur.
+* Our technique relies on an overapproximation. In our experimentes, the number of false positives  (rule pairs for which a conflict was incorrently detected) was between 0% and 12% per rule set. False negatives (rule pairs for which incorrectly no conflict is  detected) should not occur.
